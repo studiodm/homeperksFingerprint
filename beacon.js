@@ -20,7 +20,7 @@ function sendData(face_book_id, adword_id, double_click_id, opt_one, opt_two, op
     };
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost/BVPixelAPI/v1/bvpixel', true);
+    xhr.open('POST', 'http://localhost/BVBeaconAPI/v1/beacon', true);
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.onreadystatechange = function () {
         if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
