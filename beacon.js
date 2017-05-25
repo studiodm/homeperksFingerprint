@@ -3,6 +3,7 @@
  */
 
 function sendData(face_book_id, adword_id, double_click_id, opt_one, opt_two, opt_three, opt_four, opt_five) {
+    var api_host = 'http://localhost/BVBeaconAPI/v1/beacon';
     var customerid = getCookie("customerid");
     if(customerid === "undefined") {
         customerid = "";
@@ -20,7 +21,7 @@ function sendData(face_book_id, adword_id, double_click_id, opt_one, opt_two, op
     };
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost/BVBeaconAPI/v1/beacon', true);
+    xhr.open('POST', api_host, true);
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.onreadystatechange = function () {
         if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
