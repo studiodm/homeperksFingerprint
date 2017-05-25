@@ -3,7 +3,7 @@
  */
 
 function sendData(face_book_id, adword_id, double_click_id, opt_one, opt_two, opt_three, opt_four, opt_five) {
-    var api_host = 'http://localhost/BVBeaconAPI/v1/beacon';
+    var api_host = 'https://bvbbeacon.stg.bridgevine.local';
     var customerid = getCookie("customerid");
     if(customerid === "undefined") {
         customerid = "";
