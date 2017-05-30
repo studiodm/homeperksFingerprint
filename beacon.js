@@ -2,8 +2,7 @@
  * Created by reed.clarke on 4/13/2017.
  */
 
-function sendData(face_book_id, adword_id, double_click_id, opt_one, opt_two, opt_three, opt_four, opt_five) {
-    var api_host = 'https://bvbbeacon.stg.bridgevine.local';
+function sendData(api_host, face_book_id, adword_id, double_click_id, opt_one, opt_two, opt_three, opt_four, opt_five) {
     var customerid = getCookie("customerid");
     if(customerid === "undefined") {
         customerid = "";
