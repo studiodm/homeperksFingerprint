@@ -3,12 +3,12 @@
  */
 
 function sendData(api_host, face_book_id, adword_id, double_click_id, opt_one, opt_two, opt_three, opt_four, opt_five) {
-    var customerid = getCookie("customerid");
-    if(customerid === "undefined") {
-        customerid = "";
+    var cookie_customer_id = getCookie("customerid");
+    if(cookie_customer_id === "undefined") {
+        cookie_customer_id = "";
     }
     var data = {
-        customerid: customerid,
+        cookie_customer_id: cookie_customer_id,
         face_book_id: face_book_id,
         adword_id: adword_id,
         double_click_id: double_click_id,
@@ -25,7 +25,7 @@ function sendData(api_host, face_book_id, adword_id, double_click_id, opt_one, o
     xhr.onreadystatechange = function () {
         if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
             console.log("response:", this.responseText);
-            if(this.responseText.length >= 7 && this.responseText.length <= 45) {
+            if(this.responseText.length >= 7 && this.responseText.length <= 128) {
                 setCookie('customerid', this.responseText, 365);
             }
         }
