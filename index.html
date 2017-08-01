@@ -8,9 +8,10 @@
 <body>
 <h1>BV Beacon API Test</h1>
 <script>
-//    var api_host =  'https://bvbeacon.stg.bridgevine.local/v1/beacon';
-//    var api_host =  'http://qa.bridgevine.com/BVBeaconAPI/v1/beacon';
-    var api_host = 'http://localhost/BVBeaconAPI/v1/beacon';
+//    pid=google:business_cable_internet_e:Comcast_business_generic:business_cable_internet_e; // for testing
+//    var api_host =  'https://bvbeacon.stg.bridgevine.local/v1/beacon?pid=' + getParameterByName('pid');
+//    var api_host =  'http://qa.bridgevine.com/BVBeaconAPI/v1/beacon?pid=' + getParameterByName('pid');
+    var api_host = 'http://localhost/BVBeaconAPI/v1/beacon?pid=' + getParameterByName('pid');
     sendData(api_host,'fbid','aid','dcid','oone','otwo','othree','ofour','ofive');
 </script>
 </body>
